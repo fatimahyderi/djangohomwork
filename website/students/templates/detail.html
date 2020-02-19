@@ -1,0 +1,20 @@
+<h1>{{ student_name }}</h1>
+<h2>{{'Attendance'}}</h2>
+{% if attendance_list %}
+<table border="1" width="600">
+    <tr>
+        <th>Date</th>
+        <th>Attendance</th>
+    </tr>
+    
+    {% for item in attendance_list %}
+    <tr>
+        <td>{{ item.date }}</td>
+        <td>{{ item.mark_attendance }}</td>
+    
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+    <p>No students are available.</p>
+{% endif %}
